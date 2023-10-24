@@ -1,0 +1,79 @@
+1. What are primitive data types in java?
+These are total 8 primitive data types in java. They are:
+byte, short, int, long, float, double, char, boolean. 
+
+Size of the data types:
+byte - 1 byte
+short - 2 bytes
+int - 4 bytes 
+long - 8 bytes
+float - 4 bytes
+double - 8 bytes
+char - 2 bytes 
+boolean - not any 
+
+These primitive datatypes do have the corresponding wrapper class too. 
+
+2. What are the identifiers in the java?
+Identifiers are basically name given to the class, function, interface, enums or lable.
+
+There are few rules that need to be followed when defining the identifiers:
+ - Allowed charactersets are a-z,A-Z,0-9,_,$. If use any other character other then this program will throw compile time error. 
+ - It must not start with number, preceding characters can have numbers. It must start with either a-z,A-Z, _ or $. If number is used program will throw compile time error. 
+ - There should be no whitespaces in between. 
+ - Identifiers are case sensitive as java is case sensitive too. 
+ - Reserved keywords must not be use to define the identifier, if used program will throw compile time error. However, predefined class, interface, enums name can be used to define the identifier which is not recommended as it will impact the readability of the code. 
+ - There is no restriction on the lenght of the identifier, however it is recommended to not increase the length more then 15 characters to enhance the redability of the code. 
+
+3. What is final class in java?
+- It is a class with final keyword in it. It is basically done to prevent the inheritance of the class. If any attempt is made to do so compiler will throw the compilte time error. 
+- The main advantage of having final class is to provide the security to the class members from the hackers. It can also be used to create the immutable class. 
+- All the Wrapper class in java are basically final classes. 
+
+4. What are the two ways to make the class final?
+- One way is to attach the final keyword with the class name.
+Ex: 
+public final class Test{
+   ----------------
+   ----------------
+   ----------------
+}
+
+- Another way is to make all the constructors private of the class. 
+Ex:
+public class Test{
+  private Test(){
+    // prevention of initialization of the members
+  }
+
+  // other functions of the class
+}
+
+In this approach object creation outside of class will not happend and if any class try to inherit it compiler will throw the compile time error. 
+
+5. Can we create an instance of the final class in another class?
+No we cannot create the instance of the final class in another class due to usage of the final keyword which is preventing the inheritance, object creation of the class. Usage of final keyword represent that members of hte class cannot be modified or inherited at all. 
+
+6. What is volatile keyword used for?
+volatile is one of the reserved keyword under the type identifier in java. It is used only with the variables of the class. It is used to acheive the data consistency when mulitple threads are working together on a particular variable of the class. 
+It basically enables the modification made by the thread at their local processor level available to the main memory instantly which basically enables the data consistency and prevents the data inconsistency across the program. 
+
+7. What is the use of Transcient keyword?
+If we have a requirement where one of the variable or member value need not to be stored permenantly during serialization then we can use transcient keyword along with the variable. Instead of the actual value the default value associated with the variable will be persisted during the serialization. 
+
+8. What are types of casting?
+Type casting is basically converting one datatype to another datatype. Depending upon the conversion, it is classified into two types:
+ 1. Implicit type casting: 
+    When we are converting lower data type to higher data type, it is implicit type casting which is taken care by compiler itself. 
+ 2. Explicit tyep casting:
+    When we are converting the higher data type to the lower data type, it is explicit type casting and it is done by the developer forcefully using cast operator and it resutls into the data loss. It happens at the time of runtime by the jvm itself. 
+
+9. What is boxing and unboxing?
+Boxing basically means we can convert the primitive data types into the object type typically we referred to this as Wrapper class in java. 
+Unboxing refers to the process of converting the object (Wrapper class) into the primitive data type. 
+
+10. What is the difference between keywords, identifiers and literals in java?
+
+Keywords are special type of identifier which are reserved by the java and have some internal functionality associated with them. 
+Identifiers are broad umbrella term underwhich Keywords, User defined identifier and literals(true or false) comes. 
+Literals are fancy term given to the values in java. Values of datatypes like 10, null, true, 10.3, 20.33f, etc. 
